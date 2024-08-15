@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>area de login </title>
+    <link rel="stylesheet" href="./src/style.css">
+      <link rel="stylesheet" href="src/">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h1>Login</h1>
+            <form action="http://127.0.0.1:5500/index.html#">
+                <div class="input-box">
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" required>
+                    <label for="">Password</label>
+                </div>
+                <!-- <p class="link-text">
+                    Forget password ?
+                    <a href="#" id="forget-password-link">Click aqui</a> -->
+                </p>
+    
+                <button type="submit" class="btn">Login</button>
+           <!--      
+                <p class="link-text">
+                    Criar conta
+                    <a href="#" id="create-account-link">Click aqui</a>
+                </p> -->
+
+               
+                
+                
+            </form>
+        </div>
+      <!--   <span style="--i:0;"></span>
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:6;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:8;"></span>
+        <span style="--i:9;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:25;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:27;"></span>
+        <span style="--i:28;"></span>
+        <span style="--i:29;"></span>
+        <span style="--i:30;"></span>
+        <span style="--i:31;"></span>
+        <span style="--i:32;"></span>
+        <span style="--i:33;"></span>
+        <span style="--i:34;"></span>
+        <span style="--i:35;"></span>
+        <span style="--i:36;"></span>
+        <span style="--i:37;"></span>
+        <span style="--i:38;"></span>
+        <span style="--i:39;"></span>
+        <span style="--i:40;"></span>
+        <span style="--i:41;"></span>
+        <span style="--i:42;"></span>
+        <span style="--i:43;"></span>
+        <span style="--i:44;"></span>
+        <span style="--i:45;"></span>
+        <span style="--i:46;"></span>
+        <span style="--i:47;"></span>
+        <span style="--i:48;"></span>
+        <span style="--i:49;"></span> -->
+
+
+        <div class="pop-up" id="forget-password-popup">
+            <button class="close-btn" onclick="closePopup('forget-password-popup')">&times;</button>
+            <p>Sua nova senha</p>
+        </div>
+        <div class="pop-up" id="create-account-popup">
+            <button class="close-btn" onclick="closePopup('create-account-popup')">&times;</button>
+            <p>Conteúdo do pop-up para 'Criar conta'</p>
+        </div>
+        <div class="overlay" id="overlay"></div>
+
+
+        
+        
+    </div>
+
+
+    <script>
+        document.getElementById('forget-password-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            showPopup('forget-password-popup');
+        });
+
+        document.getElementById('create-account-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            showPopup('create-account-popup');
+        });
+
+        function showPopup(popupId) {
+            document.getElementById(popupId).classList.add('active');
+            document.getElementById('overlay').classList.add('active');
+        }
+
+        function closePopup(popupId) {
+            document.getElementById(popupId).classList.remove('active');
+            document.getElementById('overlay').classList.remove('active');
+        }
+
+        document.getElementById('overlay').addEventListener('click', function() {
+            closePopup('forget-password-popup');
+            closePopup('create-account-popup');
+        });
+    </script>
+    
+</body>
+</html>
